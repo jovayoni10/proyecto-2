@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="css/style.css">
+<body>
+
+
+
+
+    <div class="encabezado">
+        <h1>TIPOS DE SERVIDORES DNS Y TIPOS DE RESOLUCION DE NOMBRES DE DOMINIO</h1>
+    </div>
+<table border="4" width="100%">
+</table>
+
+<center><h2>Tipos de servidores DNS y Tipos de resolucion de nombres de dominio</h2></center>
+<p><blockquote>Estos son los tipos de servidores de acuerdo a su función:</blockquote></p>
+<ul>
+    <li>Primarios o maestros: guardan los datos de un espacio de nombres en sus ficheros.</li>
+    <li>Secundarios o esclavos: obtienen los datos de los servidores primarios a través de una transferencia de zona</li>
+    <li>Locales o caché: funcionan con el mismo software, pero no contienen la base de datos para la resolución de nombres.
+        Cuando se les realiza una consulta, estos a su vez consultan a los servidores DNS correspondientes, almacenando la 
+        respuesta en su base de datos para agilizar la repetición de estas peticiones 
+        en el futuro continuo o libre.</li>
+</ul>
+<center><h2>Tipos de resolución de nombres de dominio</h2></center>
+<p><blockquote>Un servidor DNS puede resolver un nombre de dominio de manera recursiva o iterativa. En una consulta recursiva,
+    un cliente solicita a un servidor DNS que obtenga por sí mismo la respuesta completa (es decir, dado el dominio mi.dominio.com, 
+    el cliente espera recibir la dirección IP correspondiente). Por otro lado, dada una consulta iterativa, el servidor DNS no otorga
+    una respuesta completa: para el caso de mi.dominio.com, el primer servidor al que se le realiza la consulta (un servidor raíz), 
+    retorna las direcciones IP de los servidores de nivel superior (TDL) responsables del dominio .com. De este modo, el cliente ahora 
+    debe realizar una nueva consulta a uno de estos servidores, el cual toma nota del sufijo .dominio.com y responde con la IP del servidor
+    DNS correspondiente, por ejemplo dns.dominio.com. Finalmente, el cliente envía una nueva consulta a dns.dominio.com para obtener la dirección IP de mi.dominio.com.
+    En la práctica, la consulta de un host a un DNS local es recursiva, mientras que las consultas que realiza el DNS local son iterativas. Además, 
+    las consultas iterativas sólo se realizan en caso de que el servidor DNS local no posea los datos correspondientes en caché (o en caso de que estos hayan expirado). 
+    En resumen, el proceso de resolución normal se lleva a cabo de la siguiente manera:</blockquote></p>
+<ul>
+    <li>El servidor DNS local recibe una consulta recursiva desde el resolver del host cliente</li>
+    <li>El DNS local realiza las consultas iterativas a los servidores correspondientes</li>
+    <li>El servidor DNS local entrega la resolución al host que solicitó la información</li>
+    <li>El resolver del host cliente entrega la respuesta a la aplicación correspondiente</li></ul>
+    <center><img src="https://i0.wp.com/www.swhosting.com/blog/wp-content/uploads/2014/11/dns2.jpg?fit=1000%2C600&ssl=1" widht="200px" height="200px"></center>
+
+</body>

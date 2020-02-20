@@ -1,0 +1,36 @@
+
+
+.encabezado{
+    height: 180px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+    border: 0px;
+    background-color: rgb(6, 193, 240);
+    color: rgb(24, 23, 23);
+    text-align: center;
+    padding-top: 80px;
+
+}
+
+ul li a{
+    width: 300px;
+    height: 50px;
+    background-color: rgb(0, 183, 255);
+    display: block;
+    border-left: rgb(42, 55, 58);
+    border-right: rgb(14, 53, 224);
+    padding: 10px;
+    text-decoration: none;
+    color: rgba(7, 7, 6, 0.966);
+}
+
+ul li a:hover{
+    margin-left: 10px;
+    color: rgb(200, 0, 0);
+    box-shadow: 10px 10px 20px rgb(0, 14, 14);
+    transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+}
